@@ -1,6 +1,10 @@
 package models.entities.semarchy.golden_records;
 
 import csv.Column;
+import models.Has;
+import models.entities.semarchy.SdOrgExtIdentifier;
+
+import java.util.ArrayList;
 
 public class GdOrganization {
     @Column(name = "organizationid")
@@ -86,4 +90,7 @@ public class GdOrganization {
 
     @Column(name = "class_of_trade_ims")
     public String classOfTradeIms;
+
+    @Has(pairsOfParentAndChildFields = {"b_pubid|fp_org_id", "b_sourceid|fs_org_id"})
+    public ArrayList<GdOrgExtIdentifier> gdOrgExtIdentifiers;
 }

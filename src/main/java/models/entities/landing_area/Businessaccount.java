@@ -1,6 +1,10 @@
 package models.entities.landing_area;
 
 import csv.Column;
+import models.Has;
+import models.entities.veeva.PersonAccount;
+
+import java.util.ArrayList;
 
 public class Businessaccount {
     @Column(name = "Account_Type__c")
@@ -299,4 +303,7 @@ public class Businessaccount {
 
     @Column(name = "REG_DERMATOLOGY_Target__c")
     public String REGDERMATOLOGYTargetC;
+
+    @Has(pairsOfParentAndChildFields = {"Primary_Parent_vod__c|ID"})
+    public ArrayList<Personaccount> personacccounts;
 }

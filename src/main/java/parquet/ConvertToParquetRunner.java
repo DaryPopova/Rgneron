@@ -2,16 +2,16 @@ package parquet;
 
 import org.junit.jupiter.api.Test;
 
-import java.io.IOException;
-
 public class ConvertToParquetRunner {
-    ProcessBuilder builder = new ProcessBuilder("C:\\Python33\\python.exe",
+    ProcessBuilder builder = new ProcessBuilder("/usr/bin/python3.6",
             "-u",
-            "home/alex/IdeaProjects/Rgn-master/src/main/java/parquet/csv_to_parquet_util_job.py",
-            "--arg1",
-            "argumentValue");
+            "/home/alex/IdeaProjects/Rgn-master/src/main/java/parquet/csv_to_parquet_util_job.py",
+            "/home/alex/IdeaProjects/Rgn-master/src/main");
     @Test
-    public void run() throws IOException {
-        builder.start();
+    public void run() throws Exception {
+        if (builder.inheritIO().start().waitFor() != 0) {
+            throw new Exception();
+        }
     }
+
 }
