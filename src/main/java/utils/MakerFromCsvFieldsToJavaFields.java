@@ -7,6 +7,9 @@ import org.apache.commons.csv.CSVRecord;
 import java.io.*;
 import java.util.List;
 
+/*
+Utility helped to get a list of fields for java object from csv file
+ */
 public class MakerFromCsvFieldsToJavaFields {
 
     public static void main(String args[]) throws IOException {
@@ -33,6 +36,9 @@ public class MakerFromCsvFieldsToJavaFields {
         out.close();
     }
 
+    /*
+    convert name of csv column to name of java object field
+     */
     public static String csvNameToJavaName(String csvName) {
         StringBuilder stringBuilder = new StringBuilder();
         String[] csvNameStrings = csvName.split("_+");

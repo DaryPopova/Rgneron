@@ -8,6 +8,9 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.ResultSetMetaData;
 
+/*
+Utility helped to get a list of fields for java object from database table
+ */
 public class MakerFromSqlFieldsToJavaFields {
     public static void main(String args[]) throws Exception {
         makeFromCsvFieldsToJavaFields("landing_area.personaccount", "/home/alex/IdeaProjects/Rgn-master/src/main/variables.txt");
@@ -33,6 +36,9 @@ public class MakerFromSqlFieldsToJavaFields {
         out.close();
     }
 
+    /*
+    convert name of database column to name of java object field
+    */
     public static String sqlNameToJavaName(String csvName) {
         StringBuilder stringBuilder = new StringBuilder();
         String[] csvNameStrings = csvName.split("_+");

@@ -1,4 +1,4 @@
-package models.entities.landing_area;
+package models.entities.veeva.landing_area;
 
 import csv.Column;
 

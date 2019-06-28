@@ -10,6 +10,10 @@ import java.util.Map;
 
 import static models.ObjectTools.getObject;
 
+/*
+extract list of java objects (entities) to csv file. If entity has field that is Array list of entities,
+extract this entities to a new file recursively
+ */
 public class Extractor {
     String path = "C:\\Users\\padre\\Downloads\\Microsoft.SkypeApp_kzf8qxf38zg5c!App\\All\\минимальный набор из реальных данных\\";
 
@@ -28,6 +32,9 @@ public class Extractor {
         }
     }
 
+    /*
+    extract entities recursively to csv
+     */
     private void writeByLevel(ArrayList entities,
                               Map<Integer, Map<Class, FileWriter>> nestingLevelToFileWriters,
                               Integer nestingLevel) throws Exception {
@@ -67,6 +74,10 @@ public class Extractor {
         }
     }
 
+    /*
+    If entity has field that is Array list of entities,
+    get this entities
+     */
     private ArrayList getNestedEntities(Field field, Object entity) {
         ArrayList innerEntities = new ArrayList<>();
         try {

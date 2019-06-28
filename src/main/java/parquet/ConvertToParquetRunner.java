@@ -2,6 +2,9 @@ package parquet;
 
 import org.junit.jupiter.api.Test;
 
+/*
+run python process for running python script that convert csv to parquet
+ */
 public class ConvertToParquetRunner {
     ProcessBuilder builder = new ProcessBuilder("/usr/bin/python3.6",
             "-u",

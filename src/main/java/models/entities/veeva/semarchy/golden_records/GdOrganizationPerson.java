@@ -1,10 +1,10 @@
-package models.entities.semarchy.golden_records;
+package models.entities.veeva.semarchy.golden_records;
 
 import csv.Column;
 
-public class GdOrganizationContactInfo {
-    @Column(name = "organization_contact_info")
-    public String organizationContactInfo;
+public class GdOrganizationPerson {
+    @Column(name = "organization_personid")
+    public String organizationPersonid;
 
     @Column(name = "b_classname")
     public String bClassname;
@@ -63,18 +63,27 @@ public class GdOrganizationContactInfo {
     @Column(name = "b_updator")
     public String bUpdator;
 
-    @Column(name = "contact_type")
-    public String contactType;
+    @Column(name = "relationship_status")
+    public String relationshipStatus;
 
-    @Column(name = "contact_value")
-    public String contactValue;
+    @Column(name = "relationship_type")
+    public String relationshipType;
 
-    @Column(name = "f_location_id")
-    public String fLocationId;
+    @Column(name = "f_org_id")
+    public String fOrgId;
 
-    @Column(name = "fp_location_id")
-    public String fpLocationId;
+    @Column(name = "fp_org_id")
+    public String fpOrgId;
 
-    @Column(name = "fs_location_id")
-    public String fsLocationId;
+    @Column(name = "fs_org_id")
+    public String fsOrgId;
+
+    @Column(name = "f_reg_id")
+    public String fRegId;
+
+    @Column(name = "fp_reg_id")
+    public String fpRegId;
+
+    @Column(name = "fs_reg_id")
+    public String fsRegId;
 }

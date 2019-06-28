@@ -1,4 +1,4 @@
-package models.entities.semarchy.golden_records;
+package models.entities.veeva.semarchy.golden_records;
 
 import csv.Column;
 

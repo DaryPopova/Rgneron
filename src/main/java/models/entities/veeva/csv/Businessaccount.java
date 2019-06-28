@@ -1,4 +1,4 @@
-package models.entities.veeva;
+package models.entities.veeva.csv;
 
 import csv.Column;
 import models.Has;
@@ -6,7 +6,7 @@ import models.entities.Entity;
 
 import java.util.ArrayList;
 
-public class BusinessAccount extends Entity {
+public class Businessaccount extends Entity {
     @Column(name = "account_type__c")
     public String accountTypeC;
 
@@ -306,5 +306,5 @@ public class BusinessAccount extends Entity {
 
 
     @Has(pairsOfParentAndChildFields = {"primaryParentVodC|id"})
-    public ArrayList<PersonAccount> personAccounts;
+    public ArrayList<Personaccount> personaccounts;
 }

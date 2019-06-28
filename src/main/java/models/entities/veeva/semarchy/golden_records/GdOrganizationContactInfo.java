@@ -1,10 +1,10 @@
-package models.entities.semarchy.golden_records;
+package models.entities.veeva.semarchy.golden_records;
 
 import csv.Column;
 
-public class GdLocation {
-    @Column(name = "locationid")
-    public String locationid;
+public class GdOrganizationContactInfo {
+    @Column(name = "organization_contact_info")
+    public String organizationContactInfo;
 
     @Column(name = "b_classname")
     public String bClassname;
@@ -63,48 +63,18 @@ public class GdLocation {
     @Column(name = "b_updator")
     public String bUpdator;
 
-    @Column(name = "location_id")
-    public String locationId;
+    @Column(name = "contact_type")
+    public String contactType;
 
-    @Column(name = "location_type")
-    public String locationType;
+    @Column(name = "contact_value")
+    public String contactValue;
 
-    @Column(name = "address_line_1")
-    public String addressLine1;
+    @Column(name = "f_location_id")
+    public String fLocationId;
 
-    @Column(name = "address_line_2")
-    public String addressLine2;
+    @Column(name = "fp_location_id")
+    public String fpLocationId;
 
-    @Column(name = "address_line_3")
-    public String addressLine3;
-
-    @Column(name = "address_line_4")
-    public String addressLine4;
-
-    @Column(name = "zip")
-    public String zip;
-
-    @Column(name = "zip4")
-    public String zip4;
-
-    @Column(name = "country")
-    public String country;
-
-    @Column(name = "state")
-    public String state;
-
-    @Column(name = "county")
-    public String county;
-
-    @Column(name = "city")
-    public String city;
-
-    @Column(name = "f_org_id")
-    public String fOrgId;
-
-    @Column(name = "fp_org_id")
-    public String fpOrgId;
-
-    @Column(name = "fs_org_id")
-    public String fsOrgId;
+    @Column(name = "fs_location_id")
+    public String fsLocationId;
 }

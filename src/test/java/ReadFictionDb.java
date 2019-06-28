@@ -16,8 +16,8 @@ public class ReadFictionDb {
         Connection connection = databaseReader.createConnection("org.postgresql.Driver",
                 "jdbc:postgresql://localhost:5432/postgres","postgres","1234");
 
-        ArrayList users = databaseReader.executeSelect(connection, User.class, "users");
-        ArrayList autos = databaseReader.executeSelect(connection, Auto.class, "autos");
+        ArrayList users = databaseReader.readDbTableToListOfEntities(connection, User.class, "users");
+        ArrayList autos = databaseReader.readDbTableToListOfEntities(connection, Auto.class, "autos");
         EntitiesBuilder builder = new EntitiesBuilder();
         builder.buildEntities(users, autos);
         for (Object entity: users) {

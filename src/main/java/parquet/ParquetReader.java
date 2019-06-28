@@ -17,6 +17,9 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+/*
+read parquet file
+ */
 public class ParquetReader {
     public static void main(String[] args) throws Exception {
         getParquetData("/home/degu/Downloads/RTN_RegeneronPharma_Sampleability");

@@ -8,6 +8,9 @@ import java.io.*;
 import java.util.List;
 
 public class CsvComparator {
+    /*
+    compare 2 csv files
+     */
     public void compareCsvFiles(String inputPath, String outPath, String diffPath) throws IOException {
         FileInputStream inputFile = new FileInputStream(inputPath);
         FileInputStream outputFile = new FileInputStream(outPath);

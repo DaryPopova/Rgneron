@@ -16,6 +16,9 @@ import static models.ObjectTools.getColumnName;
 import static models.ObjectTools.toTypeWithValue;
 
 public class CsvReader {
+    /*
+    convert csv lines to list of java objects
+     */
     public ArrayList readCsvToListOfEntities(Class typeOfEntity, String path) throws Exception {
         ArrayList listOfEntities = new ArrayList<>();
         FileInputStream is = new FileInputStream(path);
@@ -32,6 +35,9 @@ public class CsvReader {
         return listOfEntities;
     }
 
+    /*
+    set values in csv lines to fields of java objects
+     */
     private void setValuesToFieldsOfEntity(CSVRecord csvFields, Object entity, CSVRecord csvRaw) throws Exception {
         for (int j = 0; j < csvRaw.size(); j++) {
             for (Field field : entity.getClass().getDeclaredFields()) {
@@ -44,6 +50,9 @@ public class CsvReader {
         }
     }
 
+    /*
+    initiate object which has field that represents ArrayList of current object
+     */
     private void initializeParentOwnerOfEntity(Object entity) throws Exception {
         for (Field field: entity.getClass().getFields()) {
             if (field.getAnnotation(ParentOwner.class) != null) {

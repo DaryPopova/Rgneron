@@ -1,10 +1,10 @@
-package models.entities.semarchy.golden_records;
+package models.entities.veeva.semarchy.golden_records;
 
 import csv.Column;
 
-public class GdOrgExtIdentifier {
-    @Column(name = "org_ext_identifierid")
-    public String orgExtIdentifierid;
+public class GdPerson {
+    @Column(name = "personid")
+    public String personid;
 
     @Column(name = "b_classname")
     public String bClassname;
@@ -63,18 +63,36 @@ public class GdOrgExtIdentifier {
     @Column(name = "b_updator")
     public String bUpdator;
 
-    @Column(name = "identifier_type")
-    public String identifierType;
+    @Column(name = "first_name")
+    public String firstName;
 
-    @Column(name = "identifier_value")
-    public String identifierValue;
+    @Column(name = "middle_name")
+    public String middleName;
 
-    @Column(name = "f_org_id")
-    public String fOrgId;
+    @Column(name = "last_name")
+    public String lastName;
 
-    @Column(name = "fp_org_id")
-    public String fpOrgId;
+    @Column(name = "person_type")
+    public String personType;
 
-    @Column(name = "fs_org_id")
-    public String fsOrgId;
+    @Column(name = "gender")
+    public String gender;
+
+    @Column(name = "suffix")
+    public String suffix;
+
+    @Column(name = "salutation")
+    public String salutation;
+
+    @Column(name = "credential")
+    public String credential;
+
+    @Column(name = "primary_specialty")
+    public String primarySpecialty;
+
+    @Column(name = "secondary_specialty")
+    public String secondarySpecialty;
+
+    @Column(name = "verification_status")
+    public String verificationStatus;
 }

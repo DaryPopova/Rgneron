@@ -1,10 +1,10 @@
-package models.entities.semarchy.golden_records;
+package models.entities.veeva.semarchy.golden_records;
 
 import csv.Column;
 
-public class GdPerson {
-    @Column(name = "personid")
-    public String personid;
+public class GdLocation {
+    @Column(name = "locationid")
+    public String locationid;
 
     @Column(name = "b_classname")
     public String bClassname;
@@ -63,36 +63,48 @@ public class GdPerson {
     @Column(name = "b_updator")
     public String bUpdator;
 
-    @Column(name = "first_name")
-    public String firstName;
+    @Column(name = "location_id")
+    public String locationId;
 
-    @Column(name = "middle_name")
-    public String middleName;
+    @Column(name = "location_type")
+    public String locationType;
 
-    @Column(name = "last_name")
-    public String lastName;
+    @Column(name = "address_line_1")
+    public String addressLine1;
 
-    @Column(name = "person_type")
-    public String personType;
+    @Column(name = "address_line_2")
+    public String addressLine2;
 
-    @Column(name = "gender")
-    public String gender;
+    @Column(name = "address_line_3")
+    public String addressLine3;
 
-    @Column(name = "suffix")
-    public String suffix;
+    @Column(name = "address_line_4")
+    public String addressLine4;
 
-    @Column(name = "salutation")
-    public String salutation;
+    @Column(name = "zip")
+    public String zip;
 
-    @Column(name = "credential")
-    public String credential;
+    @Column(name = "zip4")
+    public String zip4;
 
-    @Column(name = "primary_specialty")
-    public String primarySpecialty;
+    @Column(name = "country")
+    public String country;
 
-    @Column(name = "secondary_specialty")
-    public String secondarySpecialty;
+    @Column(name = "state")
+    public String state;
 
-    @Column(name = "verification_status")
-    public String verificationStatus;
+    @Column(name = "county")
+    public String county;
+
+    @Column(name = "city")
+    public String city;
+
+    @Column(name = "f_org_id")
+    public String fOrgId;
+
+    @Column(name = "fp_org_id")
+    public String fpOrgId;
+
+    @Column(name = "fs_org_id")
+    public String fsOrgId;
 }

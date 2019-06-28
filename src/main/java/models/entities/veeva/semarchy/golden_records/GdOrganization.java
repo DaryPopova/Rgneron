@@ -1,10 +1,14 @@
-package models.entities.semarchy.golden_records;
+package models.entities.veeva.semarchy.golden_records;
 
 import csv.Column;
+import models.Has;
+import models.entities.veeva.semarchy.SdOrgExtIdentifier;
 
-public class GdSupOrganizationParentag {
-    @Column(name = "sup_organization_parentag")
-    public String supOrganizationParentag;
+import java.util.ArrayList;
+
+public class GdOrganization {
+    @Column(name = "organizationid")
+    public String organizationid;
 
     @Column(name = "b_classname")
     public String bClassname;
@@ -63,24 +67,30 @@ public class GdSupOrganizationParentag {
     @Column(name = "b_updator")
     public String bUpdator;
 
-    @Column(name = "group_name")
-    public String groupName;
+    @Column(name = "legal_business_name")
+    public String legalBusinessName;
 
-    @Column(name = "f_child_id")
-    public String fChildId;
+    @Column(name = "dba_name")
+    public String dbaName;
 
-    @Column(name = "fp_child_id")
-    public String fpChildId;
+    @Column(name = "verification_status")
+    public String verificationStatus;
 
-    @Column(name = "fs_child_id")
-    public String fsChildId;
+    @Column(name = "account_type")
+    public String accountType;
 
-    @Column(name = "f_parent_id")
-    public String fParentId;
+    @Column(name = "account_sub_type")
+    public String accountSubType;
 
-    @Column(name = "fp_parent_id")
-    public String fpParentId;
+    @Column(name = "account_status")
+    public String accountStatus;
 
-    @Column(name = "fs_parent_id")
-    public String fsParentId;
+    @Column(name = "class_of_trade_rgn")
+    public String classOfTradeRgn;
+
+    @Column(name = "class_of_trade_ims")
+    public String classOfTradeIms;
+
+    @Has(pairsOfParentAndChildFields = {"b_pubid|fp_org_id", "b_sourceid|fs_org_id"})
+    public ArrayList<GdOrgExtIdentifier> gdOrgExtIdentifiers;
 }

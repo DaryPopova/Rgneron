@@ -1,9 +1,9 @@
-package models.entities.veeva;
+package models.entities.veeva.csv;
 
 import csv.Column;
 import models.entities.Entity;
 
-public class PersonAccount extends Entity {
+public class Personaccount extends Entity {
     @Column(name = "reg_account_status__c")
     public String regAccountStatusC;
 

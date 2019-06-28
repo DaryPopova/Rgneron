@@ -1,4 +1,4 @@
-package models.entities.semarchy;
+package models.entities.veeva.semarchy;
 
 import csv.Column;
 import models.Has;

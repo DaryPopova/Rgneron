@@ -1,8 +1,6 @@
 import database.DatabaseReader;
 import models.EntitiesBuilder;
 import models.Logger;
-import models.entities.semarchy.SdOrgExtIdentifier;
-import models.entities.semarchy.SdOrganization;
 import org.junit.Test;
 
 import java.sql.Connection;
@@ -15,8 +13,8 @@ public class ReadSemarchyDb {
         Connection connection = databaseReader.createConnection("org.postgresql.Driver",
                 "jdbc:postgresql://localhost:5432/postgres","postgres","postgres");
 
-        ArrayList sdOrganizations = databaseReader.executeSelect(connection, SdOrganization.class, "semarchy_dloc2.sd_organization");
-        ArrayList sdOrgExtIdentifiers = databaseReader.executeSelect(connection, SdOrgExtIdentifier.class, "semarchy_dloc2.sd_org_ext_identifier");
+        ArrayList sdOrganizations = databaseReader.readDbTableToListOfEntities(connection, SdOrganization.class, "semarchy_dloc2.sd_organization");
+        ArrayList sdOrgExtIdentifiers = databaseReader.readDbTableToListOfEntities(connection, SdOrgExtIdentifier.class, "semarchy_dloc2.sd_org_ext_identifier");
         EntitiesBuilder builder = new EntitiesBuilder();
         builder.buildEntities(sdOrganizations, sdOrgExtIdentifiers);
         for (Object entity: sdOrganizations) {

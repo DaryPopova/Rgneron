@@ -6,6 +6,10 @@ import java.util.Collection;
 import static models.ObjectTools.getObject;
 import static models.ObjectTools.getTypeOfObject;
 
+/*
+Log fields of entity to console. If entity contains field that represents list of child entities,
+log fields of child entities recursively
+ */
 public class Logger {
     public static Report logToReport(Object object, Report report){
         Field[] fields = object.getClass().getDeclaredFields();
@@ -43,6 +47,9 @@ public class Logger {
         return report;
     }
 
+    /*
+    log field that contains list of current object as field
+    */
     private static void logParentOwnersOfObject(Object object, Report report){
         for (Field field: object.getClass().getFields()) {
             if (field.getAnnotation(ParentOwner.class) != null) {
@@ -51,7 +58,7 @@ public class Logger {
         }
     }
 
-    public static Report logToReport(Object entity) throws IllegalAccessException {
+    public static Report logToReport(Object entity) {
         Report report = new Report();
         logToReport(entity, report);
         report.addLine("%s", "-------------------");

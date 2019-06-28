@@ -3,6 +3,9 @@ package models;
 import java.util.ArrayList;
 import java.util.Arrays;
 
+/*
+add records to log, make indentations in recursion
+ */
 public class Report {
     public ArrayList<String> lines = new ArrayList<>();
     private int currentIndent = 0;

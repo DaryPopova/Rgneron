@@ -15,7 +15,10 @@ public class DatabaseReader {
         return con;
     }
 
-    public ArrayList executeSelect(Connection connection,Class typeOfEntity, String table) throws Exception {
+    /*
+    read database records to java objects
+     */
+    public ArrayList readDbTableToListOfEntities(Connection connection, Class typeOfEntity, String table) throws Exception {
         PreparedStatement pst = connection.prepareStatement(String.format("SELECT * FROM %s", table));
         ResultSet rs = pst.executeQuery();
 
@@ -42,6 +45,5 @@ public class DatabaseReader {
         }
         return listOfEntities;
     }
-
 
 }

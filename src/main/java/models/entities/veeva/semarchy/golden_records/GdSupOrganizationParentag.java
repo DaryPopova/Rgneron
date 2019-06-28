@@ -1,10 +1,10 @@
-package models.entities.semarchy.golden_records;
+package models.entities.veeva.semarchy.golden_records;
 
 import csv.Column;
 
-public class GdOrganizationPerson {
-    @Column(name = "organization_personid")
-    public String organizationPersonid;
+public class GdSupOrganizationParentag {
+    @Column(name = "sup_organization_parentag")
+    public String supOrganizationParentag;
 
     @Column(name = "b_classname")
     public String bClassname;
@@ -63,27 +63,24 @@ public class GdOrganizationPerson {
     @Column(name = "b_updator")
     public String bUpdator;
 
-    @Column(name = "relationship_status")
-    public String relationshipStatus;
+    @Column(name = "group_name")
+    public String groupName;
 
-    @Column(name = "relationship_type")
-    public String relationshipType;
+    @Column(name = "f_child_id")
+    public String fChildId;
 
-    @Column(name = "f_org_id")
-    public String fOrgId;
+    @Column(name = "fp_child_id")
+    public String fpChildId;
 
-    @Column(name = "fp_org_id")
-    public String fpOrgId;
+    @Column(name = "fs_child_id")
+    public String fsChildId;
 
-    @Column(name = "fs_org_id")
-    public String fsOrgId;
+    @Column(name = "f_parent_id")
+    public String fParentId;
 
-    @Column(name = "f_reg_id")
-    public String fRegId;
+    @Column(name = "fp_parent_id")
+    public String fpParentId;
 
-    @Column(name = "fp_reg_id")
-    public String fpRegId;
-
-    @Column(name = "fs_reg_id")
-    public String fsRegId;
+    @Column(name = "fs_parent_id")
+    public String fsParentId;
 }
