@@ -2,7 +2,6 @@ package models.entities.veeva.semarchy.golden_records;
 
 import csv.Column;
 import models.Has;
-import models.entities.veeva.semarchy.SdOrgExtIdentifier;
 
 import java.util.ArrayList;
 
